@@ -24,6 +24,7 @@ public class FileLoader implements Loader {
                 result.add(line);
             }
         } catch (Exception e) {
+            System.out.println(e);
         }
         return result;
     }

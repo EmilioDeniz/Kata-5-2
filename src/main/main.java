@@ -16,5 +16,6 @@ public class main {
         Loader loader = new EmailDomainLoader(new MailListReader(new FileLoader(new File("email.txt"))));
         List<String> domains = loader.load();
         HistogramDisplay histDisplay = new HistogramDisplay("Histograma de e-mails",MailHistogramBuilder.build(domains));
+        histDisplay.execute();
     }
 }

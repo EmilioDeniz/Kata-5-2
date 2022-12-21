@@ -12,6 +12,6 @@ public class EmailDomainLoader implements Loader{
 
     @Override
     public List<String> load() {
-        return loader.load().stream().map(line -> line.substring(line.indexOf("."+1))).collect(toList());
+        return loader.load().stream().map(line -> line.substring(line.indexOf("@"))).collect(toList());
     }
 }
